@@ -42,6 +42,8 @@ Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS fee
 
 ### How to start and stop
 
+* This app will auto start with a reboot/restart. If you wanted to stop and start it again without rebooting you can under the Drobo Dashboard. follow the steps below.
+
 * Start Drobo Dashboard
 * Go to Drobo Apps
 * Find NzbDrone
