@@ -1,0 +1,524 @@
+2019-11-28 11-23-22: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and stopped" >&3
++ echo NzbDrone is enabled and stopped
+2019-11-28 11-23-27: ./service.sh
++ main
++ SET_X=set -x
++ set +x
++ usage
++ local _message=
++ local _items=0
++ _message=Usage: ./service.sh [
++ _function_exists start
++ type start+ 
+/bin/grep -q function
++ _message=Usage: ./service.sh [start
++ _items=1
++ _function_exists stop
++ type stop
++ /bin/grep -q function
++ [ 1 -gt 0 ]
++ _message=Usage: ./service.sh [start|
++ _message=Usage: ./service.sh [start|stop|waitstop
++ _items=3
++ _function_exists force_stop
++ type force_stop
++ /bin/grep -q function
++ [ 3 -gt 0 ]
++ _message=Usage: ./service.sh [start|stop|waitstop|
++ _message=Usage: ./service.sh [start|stop|waitstop|kill
++ _items=4
++ _function_exists restart
++ type+  restart/bin/grep
+ -q function
++ [ 4 -gt 0 ]
++ _message=Usage: ./service.sh [start|stop|waitstop|kill|
++ _message=Usage: ./service.sh [start|stop|waitstop|kill|restart
++ _items=5
++ _function_exists reload
++ type reload
++ /bin/grep -q function
++ _function_exists status
++ type status
++ /bin/grep -q function
++ [ 5 -gt 0 ]
++ _message=Usage: ./service.sh [start|stop|waitstop|kill|restart|
++ _message=Usage: ./service.sh [start|stop|waitstop|kill|restart|status
++ _items=6
++ _message=Usage: ./service.sh [start|stop|waitstop|kill|restart|status]
++ eval echo "Usage: ./service.sh [start|stop|waitstop|kill|restart|status]" >&3
++ echo Usage: ./service.sh [start|stop|waitstop|kill|restart|status]
++ exit 1
+2019-11-28 11-23-33: ./service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and stopped" >&3
++ echo NzbDrone is enabled and stopped
+2019-11-28 11-23-38: ./service.sh kill
++ main kill
++ SET_X=set -x
++ set +x
++ kill_service
++ /usr/bin/realpath ./service.sh
++ /usr/bin/dirname /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh
++ local _appDir=/mnt/DroboFS/Shares/DroboApps/NzbDrone
++ /usr/bin/basename /mnt/DroboFS/Shares/DroboApps/NzbDrone
++ local _appName=NzbDrone
++ _function_exists force_stop
++ type force_stop
++ /bin/grep -q function
++ force_stop
++ rm -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt
++ return 0
++ [ -n /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ [ -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ _poststop_app NzbDrone
++ [ -z  ]
++ _set_enabled NzbDrone NO
++ local _value=
++ [ ! -f /mnt/DroboFS/Shares/DroboApps/.servicerc ]
++ /usr/bin/awk -F = -v name=NzbDrone_enable $1 == name { gsub(/"/, "", $2); print $2 } /mnt/DroboFS/Shares/DroboApps/.servicerc
++ _value=YES
++ [ -z YES ]
++ /bin/sed -i s/NzbDrone_enable=.*/NzbDrone_enable="NO"/g /mnt/DroboFS/Shares/DroboApps/.servicerc
+2019-11-28 11-23-39: ./service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is disabled and stopped" >&3
++ echo NzbDrone is disabled and stopped
+2019-11-28 11-23-42: ./service.sh
++ main
++ SET_X=set -x
++ set +x
++ usage
++ local _message=
++ local _items=0
++ _message=Usage: ./service.sh [
++ _function_exists start
++ type start
++ /bin/grep -q function
++ _message=Usage: ./service.sh [start
++ _items=1
++ _function_exists stop
++ type stop
++ /bin/grep -q function
++ [ 1 -gt 0 ]
++ _message=Usage: ./service.sh [start|
++ _message=Usage: ./service.sh [start|stop|waitstop
++ _items=3
++ _function_exists force_stop
++ type force_stop
++ /bin/grep -q function
++ [ 3 -gt 0 ]
++ _message=Usage: ./service.sh [start|stop|waitstop|
++ _message=Usage: ./service.sh [start|stop|waitstop|kill
++ _items=4
++ _function_exists restart
++ type restart
++ /bin/grep -q function
++ [ 4 -gt 0 ]
++ _message=Usage: ./service.sh [start|stop|waitstop|kill|
++ _message=Usage: ./service.sh [start|stop|waitstop|kill|restart
++ _items=5
++ _function_exists reload
++ type reload
++ /bin/grep -q function
++ _function_exists status
++ type status
++ /bin/grep -q function
++ [ 5 -gt 0 ]
++ _message=Usage: ./service.sh [start|stop|waitstop|kill|restart|
++ _message=Usage: ./service.sh [start|stop|waitstop|kill|restart|status
++ _items=6
++ _message=Usage: ./service.sh [start|stop|waitstop|kill|restart|status]
++ eval echo "Usage: ./service.sh [start|stop|waitstop|kill|restart|status]" >&3
++ echo Usage: ./service.sh [start|stop|waitstop|kill|restart|status]
++ exit 1
+2019-11-28 11-23-45: ./service.sh start
++ main start
++ SET_X=set -x
++ set +x
++ start_service
++ /usr/bin/realpath ./service.sh
++ /usr/bin/dirname /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh
++ local _appDir=/mnt/DroboFS/Shares/DroboApps/NzbDrone
++ /usr/bin/basename /mnt/DroboFS/Shares/DroboApps/NzbDrone
++ local _appName=NzbDrone
++ _create_files NzbDrone
++ local _appTmpDir=/tmp/DroboApps/NzbDrone
++ _create_tmpdir NzbDrone
++ local _appTmpDir=/tmp/DroboApps/NzbDrone
++ [ ! -d /tmp/DroboApps/NzbDrone ]
++ [ -n isset ]
++ echo NzbDrone
++ [ -n isset ]
++ echo 0.11.228.0
++ [ -n isset ]
++ echo TV Downloader
++ [ -n isset ]
++ echo 2.1
++ [ -n isset ]
++ echo 
++ [ -n isset ]
++ echo :8989
++ _prestart_app NzbDrone
++ _set_enabled NzbDrone YES
++ local _value=
++ [ ! -f /mnt/DroboFS/Shares/DroboApps/.servicerc ]
++ /usr/bin/awk -F = -v name=NzbDrone_enable $1 == name { gsub(/"/, "", $2); print $2 } /mnt/DroboFS/Shares/DroboApps/.servicerc
++ _value=NO
++ [ -z NO ]
++ /bin/sed -i s/NzbDrone_enable=.*/NzbDrone_enable="YES"/g /mnt/DroboFS/Shares/DroboApps/.servicerc
++ _file_equals /sys/devices/dri_dnas_primary/dnas_adp_1/driver/serial /mnt/DroboFS/Shares/DroboApps/NzbDrone/host_uid.txt
++ /usr/bin/diff -q /sys/devices/dri_dnas_primary/dnas_adp_1/driver/serial /mnt/DroboFS/Shares/DroboApps/NzbDrone/host_uid.txt
++ is_running /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt 
++ [ -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ _deploy_apache_conf NzbDrone
++ local _appConf=/mnt/DroboFS/Shares/DroboApps/NzbDrone/NzbDrone.conf
++ local _apacheName=apache
++ local _apacheDir=/mnt/DroboFS/Shares/DroboApps/apache
++ local _apacheConf=/mnt/DroboFS/Shares/DroboApps/apache/conf/includes/NzbDrone.conf
++ local _depends=
++ local _restart=0
++ [ ! -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/NzbDrone.conf ]
++ return 0
++ [ -n  ]
++ _function_exists start
++ type start
++ /bin/grep -q function
++ start
++ rm -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/error.txt
++ echo NzbDrone is configured.
++ touch /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt
++ sudo ./NzbDrone.exe
+2019-11-28 11-23-48: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and running" >&3
++ echo NzbDrone is enabled and running
+[Info] Bootstrap: Starting Sonarr - /mnt/DroboFS/Shares/DroboApps/NzbDrone/NzbDrone.exe - Version 2.0.0.5338 
+[Info] SingleInstancePolicy: 1 instance(s) of Sonarr are running 
+[Warn] SingleInstancePolicy: Another instance of Sonarr is already running. 
+[Info] Bootstrap: Application is being terminated. Reason : Another instance is already running 
+Last login: Thu Nov 28 11:23:45 PST 2019
++ return 0
+2019-11-28 11-24-03: ./service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and running" >&3
++ echo NzbDrone is enabled and running
+2019-11-28 11-24-13: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and running" >&3
++ echo NzbDrone is enabled and running
+2019-11-28 11-24-39: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and running" >&3
++ echo NzbDrone is enabled and running
+2019-11-28 11-25-04: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and running" >&3
++ echo NzbDrone is enabled and running
+2019-11-28 11-25-21: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and running" >&3
++ echo NzbDrone is enabled and running
+2019-11-28 11-25-21: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh stop
++ main stop
++ SET_X=set -x
++ set +x
++ stop_service
++ /usr/bin/realpath /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh
++ /usr/bin/dirname /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh
++ local _appDir=/mnt/DroboFS/Shares/DroboApps/NzbDrone
++ /usr/bin/basename /mnt/DroboFS/Shares/DroboApps/NzbDrone
++ local _appName=NzbDrone
++ local _wait=0
++ local _retries=10
++ is_stopped /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt 
++ is_running /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt
++ [ -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ return 1
++ _function_exists stop
++ type stop+ 
+/bin/grep -q function
++ stop
++ rm -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt
++ return 0
++ [ 10 -gt 0 ]
++ is_stopped /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt 
++ is_running /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt
++ [ -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ return 0
++ break
++ is_stopped /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt 
++ is_running /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt
++ [ -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ return 0
++ [ -n /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ [ -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ _poststop_app NzbDrone
++ [ -z  ]
++ _set_enabled NzbDrone NO
++ local _value=
++ [ ! -f /mnt/DroboFS/Shares/DroboApps/.servicerc ]
++ /usr/bin/awk -F = -v name=NzbDrone_enable $1 == name { gsub(/"/, "", $2); print $2 } /mnt/DroboFS/Shares/DroboApps/.servicerc
++ _value=YES
++ [ -z YES ]
++ /bin/sed -i s/NzbDrone_enable=.*/NzbDrone_enable="NO"/g /mnt/DroboFS/Shares/DroboApps/.servicerc
+2019-11-28 11-25-24: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is disabled and stopped" >&3
++ echo NzbDrone is disabled and stopped
+2019-11-28 11-25-27: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is disabled and stopped" >&3
++ echo NzbDrone is disabled and stopped
+2019-11-28 11-25-29: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is disabled and stopped" >&3
++ echo NzbDrone is disabled and stopped
+2019-11-28 11-25-29: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh start
++ main start
++ SET_X=set -x
++ set +x
++ start_service
++ /usr/bin/realpath /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh
++ /usr/bin/dirname /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh
++ local _appDir=/mnt/DroboFS/Shares/DroboApps/NzbDrone
++ /usr/bin/basename /mnt/DroboFS/Shares/DroboApps/NzbDrone
++ local _appName=NzbDrone
++ _create_files NzbDrone
++ local _appTmpDir=/tmp/DroboApps/NzbDrone
++ _create_tmpdir NzbDrone
++ local _appTmpDir=/tmp/DroboApps/NzbDrone
++ [ ! -d /tmp/DroboApps/NzbDrone ]
++ [ -n isset ]
++ echo NzbDrone
++ [ -n isset ]
++ echo 0.11.228.0
++ [ -n isset ]
++ echo TV Downloader
++ [ -n isset ]
++ echo 2.1
++ [ -n isset ]
++ echo 
++ [ -n isset ]
++ echo :8989
++ _prestart_app NzbDrone
++ _set_enabled NzbDrone YES
++ local _value=
++ [ ! -f /mnt/DroboFS/Shares/DroboApps/.servicerc ]
++ /usr/bin/awk -F = -v name=NzbDrone_enable $1 == name { gsub(/"/, "", $2); print $2 } /mnt/DroboFS/Shares/DroboApps/.servicerc
++ _value=YES
++ [ -z YES ]
++ /bin/sed -i s/NzbDrone_enable=.*/NzbDrone_enable="YES"/g /mnt/DroboFS/Shares/DroboApps/.servicerc
++ _file_equals /sys/devices/dri_dnas_primary/dnas_adp_1/driver/serial /mnt/DroboFS/Shares/DroboApps/NzbDrone/host_uid.txt
++ /usr/bin/diff -q /sys/devices/dri_dnas_primary/dnas_adp_1/driver/serial /mnt/DroboFS/Shares/DroboApps/NzbDrone/host_uid.txt
++ is_running /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt 
++ [ -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ _deploy_apache_conf NzbDrone
++ local _appConf=/mnt/DroboFS/Shares/DroboApps/NzbDrone/NzbDrone.conf
++ local _apacheName=apache
++ local _apacheDir=/mnt/DroboFS/Shares/DroboApps/apache
++ local _apacheConf=/mnt/DroboFS/Shares/DroboApps/apache/conf/includes/NzbDrone.conf
++ local _depends=
++ local _restart=0
++ [ ! -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/NzbDrone.conf ]
++ return 0
++ [ -n  ]
++ _function_exists start
++ type start
++ /bin/grep -q function
++ start
++ rm -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/error.txt
++ echo NzbDrone is configured.
++ touch /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt
++ return+  0sudo
+ ./NzbDrone.exe
+2019-11-28 11-25-32: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and running" >&3
++ echo NzbDrone is enabled and running
+[Info] Bootstrap: Starting Sonarr - /mnt/DroboFS/Shares/DroboApps/NzbDrone/NzbDrone.exe - Version 2.0.0.5338 
+2019-11-28 11-25-35: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and running" >&3
++ echo NzbDrone is enabled and running
+[Info] SingleInstancePolicy: 1 instance(s) of Sonarr are running 
+[Warn] SingleInstancePolicy: Another instance of Sonarr is already running. 
+[Info] Bootstrap: Application is being terminated. Reason : Another instance is already running 
+Last login: Thu Nov 28 11:24:03 PST 2019
+2019-11-28 11-25-55: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and running" >&3
++ echo NzbDrone is enabled and running
+2019-11-28 11-26-20: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and running" >&3
++ echo NzbDrone is enabled and running
+2019-11-28 11-26-34: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is enabled and running" >&3
++ echo NzbDrone is enabled and running
+2019-11-28 11-26-35: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh stop
++ main stop
++ SET_X=set -x
++ set +x
++ stop_service
++ /usr/bin/realpath /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh
++ /usr/bin/dirname /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh
++ local _appDir=/mnt/DroboFS/Shares/DroboApps/NzbDrone
++ /usr/bin/basename /mnt/DroboFS/Shares/DroboApps/NzbDrone
++ local _appName=NzbDrone
++ local _wait=0
++ local _retries=10
++ is_stopped /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt 
++ is_running /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt
++ [ -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ return 1
++ _function_exists stop
++ type stop
++ /bin/grep -q function
++ stop
++ rm -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt
++ return 0
++ [ 10 -gt 0 ]
++ is_stopped /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt 
++ is_running /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt
++ [ -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ return 0
++ break
++ is_stopped /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt 
++ is_running /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt
++ [ -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ return 0
++ [ -n /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ [ -f /mnt/DroboFS/Shares/DroboApps/NzbDrone/pid.txt ]
++ _poststop_app NzbDrone
++ [ -z  ]
++ _set_enabled NzbDrone NO
++ local _value=
++ [ ! -f /mnt/DroboFS/Shares/DroboApps/.servicerc ]
++ /usr/bin/awk -F = -v name=NzbDrone_enable $1 == name { gsub(/"/, "", $2); print $2 } /mnt/DroboFS/Shares/DroboApps/.servicerc
++ _value=YES
++ [ -z YES ]
++ /bin/sed -i s/NzbDrone_enable=.*/NzbDrone_enable="NO"/g /mnt/DroboFS/Shares/DroboApps/.servicerc
+2019-11-28 11-26-37: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is disabled and stopped" >&3
++ echo NzbDrone is disabled and stopped
+2019-11-28 11-26-40: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is disabled and stopped" >&3
++ echo NzbDrone is disabled and stopped
+2019-11-28 11-26-41: ./service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is disabled and stopped" >&3
++ echo NzbDrone is disabled and stopped
+2019-11-28 11-26-46: /mnt/DroboFS/Shares/DroboApps/NzbDrone/service.sh status
++ main status
++ SET_X=set -x
++ set +x
++ status
++ SET_X=set -x
++ set +x
++ eval echo "NzbDrone is disabled and stopped" >&3
++ echo NzbDrone is disabled and stopped
