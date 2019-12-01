@@ -39,3 +39,11 @@ Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS fee
 * Reboot your drobo
 * NzbDrone will be running under your app section
 * http://DROBOIP:8989
+
+### How to start and stop
+
+* Start Drobo Dashboard
+* Go to Drobo Apps
+* Find NzbDrone
+* Double click NzbDrone
+* NzbDrone Option box will open you can START or STOP or click SETTINGS
