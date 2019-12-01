@@ -1,1 +1,1 @@
-
+NzbDrone is configured.
