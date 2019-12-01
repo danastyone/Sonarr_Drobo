@@ -7,7 +7,7 @@
 
 framework_version="2.1"
 name="NzbDrone"
-version="2.0.0.4427"
+version="2.0.0.5338"
 description="Sonarr"
 depends=""
 webui=":8989"
