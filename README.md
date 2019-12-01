@@ -6,11 +6,11 @@ This is more or less a clone of the Main github just with drobo start up
 
 ## How to install
 
-Clone this github to a folder named : NzbDrone
-Place the NzbDrone folder in to : \DroboApps\ <-- Folder
-Reboot your drobo
-NzbDrone will be running under your app section
-http://DROBOIP:8989
+* Clone this github to a folder named : NzbDrone
+* Place the NzbDrone folder in to : \DroboApps\ <-- Folder
+* Reboot your drobo
+* NzbDrone will be running under your app section
+* http://DROBOIP:8989
 
  
 
